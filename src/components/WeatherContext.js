@@ -5,7 +5,7 @@ export const WeatherContext = createContext();
 
 export const WeatherProvider = ({children}) => {
     const [weatherData, setWeatherData] = useState(null);
-    const [city, setCity] = useState('Paris');
+    const [city, setCity] = useState('Marseille');
 
     const fetchWeatherData = async () => {
         try {
@@ -16,10 +16,6 @@ export const WeatherProvider = ({children}) => {
             console.error('Erreur lors de la récupération des données météo', error);
         }
     };
-
-    
-    
-
 
 useEffect(() => {
     fetchWeatherData();
