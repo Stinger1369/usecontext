@@ -16,7 +16,10 @@ const handleSubmit = (event) => {
 }
 
 const [showModal, setShowModal] = useState(false);
-
+const handleClose = () => {
+    console.log("Fermeture du modal");
+    setShowModal(false);
+};
 
   return (
     <div className="WeatherPage">
@@ -47,7 +50,8 @@ const [showModal, setShowModal] = useState(false);
         Comprendre useContext
       </Button>
 
-      <ContextModal show={showModal} handleClose={() => setShowModal(false)} />
+      <ContextModal show={showModal} handleClose={handleClose} />
+
     </div>
     );
 }
