@@ -3,9 +3,12 @@ import { useContext,useState } from 'react';
 import { WeatherContext } from '../components/WeatherContext';
 import ContextModal from '../pages/Modal';
 import Button from "react-bootstrap/Button";
+import { ThemeContext } from '../components/ThemeContext';
+
 
 function WeatherPage() {
   const {weatherData, city ,setCity} = useContext(WeatherContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
 const handleChange = (event) => {
     setCity(event.target.value);
@@ -22,8 +25,11 @@ const handleClose = () => {
 };
 
   return (
-    <div className="WeatherPage">
-        <form onSubmit={handleSubmit}>
+       <div className={`WeatherPage ${theme}`}>
+        <Button variant="secondary" onClick={toggleTheme}>
+        Changer de thème
+        </Button>
+            <form onSubmit={handleSubmit}>
             <input type="text" value={city} onChange={handleChange} placeholder='Entrer le Nom de la ville' />
             <button type="submit">Rechercher</button>
         </form>
