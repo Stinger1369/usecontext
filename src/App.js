@@ -8,12 +8,13 @@ import './App.css';
 function App() {
   return (
     <ThemeProvider>
- <WeatherProvider>
-    <div className="App">
-      <WeatherPage />
-    </div>
-  </WeatherProvider>
-  </ThemeProvider>
+      <WeatherProvider>
+        <div className="App">
+         <WeatherPage />
+         
+        </div>
+      </WeatherProvider>
+    </ThemeProvider>
   ); 
 }
 
