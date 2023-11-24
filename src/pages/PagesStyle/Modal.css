@@ -7,7 +7,7 @@
   }
   
   .slick-slide {
-    text-align: center;
+    text-align: left;
     color: #333;
     background-color: white;
     margin: 10px;
@@ -27,5 +27,10 @@
   
   .close-modal-button:hover {
     background-color: #0056b3;
+  }
+
+  code {
+    background: #ddd;
+    border: 1px solid #555;
   }
     
