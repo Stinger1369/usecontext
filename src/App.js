@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { WeatherProvider } from './components/WeatherContext';
 import WeatherPage from './pages/WeatherPage';
 import './App.css';
 
 function App() {
   return (
- <Router>
-    <Routes>
-      <Route path="/" element={<WeatherPage />} />
-    </Routes>
- </Router>
+ <WeatherProvider>
+    <div className="App">
+      <WeatherPage />
+    </div>
+  </WeatherProvider>
   ); 
 }
 
