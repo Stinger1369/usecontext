@@ -1,19 +1,20 @@
 /* Ajoutez ce CSS dans votre fichier CSS principal ou dans un fichier spécifique pour ContextModal */
 .slider-container {
+    
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   
   .slick-slide {
+    
     text-align: center;
     color: #333;
     background-color: white;
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
   }
   .close-modal-button {
     background-color: #007bff;
@@ -28,4 +29,26 @@
   .close-modal-button:hover {
     background-color: #0056b3;
   }
-    
+.code-example{
+    display: flex;
+    flex-direction: row;
+}
+
+.custom-modal .modal-dialog {
+    min-width: 100vw; /* largeur de la vue */
+    height: 100vh; /* hauteur de la vue */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-modal .modal-content {
+    width: 100%; /* Largeur du contenu du modal */
+    height: 80%; /* Hauteur maximale du contenu du modal */
+    overflow-y: auto; /* Permet le défilement si le contenu est trop long */
+    border-radius: 10px; /* Vous pouvez ajuster selon votre design */
+  }
+  
+  
+  
